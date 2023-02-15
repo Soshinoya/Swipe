@@ -1,9 +1,35 @@
-@import "vars";
-@import "fonts";
 @import "reset";
-@import "libs";
+@import "fonts";
+@import "vars";
 @import "global";
 
 * {
     appearance: none;
+}
+
+.header {
+    padding: 35px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+.header-nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__item-link {
+        color: $accent-700-color;
+        transition: color .3s ease;
+        &:hover {
+            color: $carminу-pink-color;
+        }
+    }
 }

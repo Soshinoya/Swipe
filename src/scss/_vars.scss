@@ -1,8 +1,16 @@
-// $accent-color: #2B6373;
-// $white-color: #fff;
-// $black-color: #000;
+$accent-700-color: #1A1930;
+$accent-600-color: #2D2B5C;
+$accent-500-color: #6259EA;
+$carminу-pink-color: #EA5959;
+$white-color: #FFF;
+$gray-color: #C1C1C1;
 
-// %comfortaa-400 {
-//     font-family: 'Comfortaa';
-//     font-weight: 400;
-// }
+%prompt-400 {
+    font-family: 'Prompt';
+    font-weight: 400;
+}
+
+%poppins-400 {
+    font-family: 'Poppins';
+    font-weight: 400;
+}
