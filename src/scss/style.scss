@@ -9,6 +9,7 @@
 
 .header {
     padding: 35px 0;
+    background-color: $white-color;
 
     &__inner {
         display: flex;
@@ -27,9 +28,107 @@
 
     &__item-link {
         color: $accent-700-color;
-        transition: color .3s ease;
+        transition: color 0.3s ease;
         &:hover {
             color: $carminу-pink-color;
         }
+    }
+}
+
+.footer {
+    padding: 85px 0 65px;
+    background-color: $accent-700-color;
+    z-index: 0;
+
+    a:hover {
+        color: $white-color;
+    }
+
+    &__inner {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 50%;
+            right: 0;
+            background-color: #e7e5ff;
+            top: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 50%;
+            right: 0;
+            background-color: #e7e5ff;
+            bottom: 0;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 370px;
+        height: 465px;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: filter 0.3s ease;
+
+        background-image: url("./../images/bg/orange-spiral--small.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width: 1470px) {
+            filter: blur(10px);
+        }
+    }
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    height: 100%;
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-bottom: 5px;
+        color: $white-color;
+    }
+
+    &__email {
+        margin-bottom: auto;
+        color: $white-color;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    &__copyright {
+        font-size: 14px;
+        line-height: 20px;
+        color: $white-color;
+
+        span {
+            color: $accent-500-color;
+        }
+    }
+}
+
+.footer-links {
+    padding: 60px 110px 60px 0;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__link {
+        color: $white-color;
     }
 }
