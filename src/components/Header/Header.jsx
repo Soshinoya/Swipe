@@ -1,8 +1,9 @@
-import Headroom from "react-headroom";
+import Headroom from 'react-headroom'
 
 import swipeLogo from './../../images/companies/swipe.png'
 
 const Header = () => {
+
     return (
         <Headroom>
             <header className="header">

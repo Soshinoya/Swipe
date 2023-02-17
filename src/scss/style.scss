@@ -9,13 +9,23 @@
 
 .header {
     padding: 35px 0;
-    background-color: $white-color;
 
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 30px;
+    }
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        backdrop-filter: blur(10px);
     }
 }
 
@@ -67,22 +77,11 @@
     }
 
     &__bg {
-        position: absolute;
         width: 370px;
         height: 465px;
         right: 0;
         bottom: 0;
-        z-index: -1;
-        transition: filter 0.3s ease;
-
         background-image: url("./../images/bg/orange-spiral--small.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        @media (max-width: 1470px) {
-            filter: blur(10px);
-        }
     }
 }
 
@@ -130,5 +129,55 @@
 
     &__link {
         color: $white-color;
+    }
+}
+
+.offer {
+    padding: 135px 0 115px;
+    position: relative;
+
+    &__bg {
+        width: 850px;
+        height: 960px;
+        right: 0;
+        top: 0;
+        background-image: url("./../images/bg/orange-spiral--big.png");
+    }
+}
+
+.offer-info {
+    &__title {
+        max-width: 770px;
+    }
+
+    &__text {
+        font-size: 30px;
+        line-height: 42px;
+        margin: 60px 0 50px;
+    }
+}
+
+.offer-bottom {
+    margin-top: 55px;
+
+    &__link p {
+        @extend %poppins-400;
+        color: $accent-700-color;
+        text-transform: uppercase;
+    }
+
+    &__link-box {
+        width: 15px;
+        height: 15px;
+        background-color: $carminу-pink-color;
+        z-index: -1;
+    }
+
+    &__socials {
+        gap: 15px;
+    }
+
+    &__socials-link i {
+        color: $accent-700-color;
     }
 }

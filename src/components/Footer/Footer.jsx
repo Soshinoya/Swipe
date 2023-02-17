@@ -9,9 +9,8 @@ const Footer = () => {
     const footerParallaxBg = useRef(null)
 
     useEffect(() => {
-        if (footerParallaxBg !== null) shapesParallax(footerParallaxBg.current)
+        if (footerParallaxBg !== null) shapesParallax(footerParallaxBg.current, 1000)
     }, [])
-
 
     return (
         <footer className="footer position-relative">
@@ -92,7 +91,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-parallax">
-                <div ref={footerParallaxBg} className="footer__bg d-none d-lg-block"></div>
+                <div ref={footerParallaxBg} className="parallax-bg footer__bg d-none d-lg-block"></div>
             </div>
         </footer>
     )
