@@ -57,6 +57,11 @@ h4 {
     line-height: 38px;
 }
 
+h5 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
 .button {
     width: fit-content;
     border: none;
@@ -97,7 +102,6 @@ h4 {
 
 .parallax-bg {
     position: absolute;
-    z-index: -1;
     transition: filter 0.3s ease;
 
     background-size: cover;

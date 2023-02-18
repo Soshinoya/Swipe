@@ -7,3 +7,7 @@ $container-max-widths: (
     xl: 1140px,
     xxl: 1300px,
 );
+
+.headroom-wrapper {
+    z-index: 2;
+}

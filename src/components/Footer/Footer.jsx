@@ -9,7 +9,7 @@ const Footer = () => {
     const footerParallaxBg = useRef(null)
 
     useEffect(() => {
-        if (footerParallaxBg !== null) shapesParallax(footerParallaxBg.current, 1000)
+        if (footerParallaxBg !== null) shapesParallax(footerParallaxBg.current, 1500)
     }, [])
 
     return (

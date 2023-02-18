@@ -136,6 +136,11 @@
     padding: 135px 0 115px;
     position: relative;
 
+    &__inner {
+        z-index: 1;
+        position: relative;
+    }
+
     &__bg {
         width: 850px;
         height: 960px;
@@ -179,5 +184,92 @@
 
     &__socials-link i {
         color: $accent-700-color;
+    }
+}
+
+.companies {
+    padding: 65px 0;
+    background-color: $gray-300-color;
+
+    &__item {
+        height: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--webflow {
+            height: 35px;
+        }
+    }
+}
+
+.statistic {
+    padding: 100px 0 50px;
+
+    &__bg--green {
+        width: 580px;
+        height: 590px;
+        left: 0;
+        top: 0;
+        background-image: url("./../images/bg/triangle-big-green.png");
+    }
+
+    &__bg--pink {
+        width: 160px;
+        height: 180px;
+        left: 25%;
+        bottom: 0;
+        background-image: url("./../images/bg/triangle-small-pink.png");
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.statistic-top {
+    &__subtitle {
+        @extend %poppins-400;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+}
+
+.statistic-numbers {
+    &__item {
+        margin: 30px 0;
+    }
+
+    &__item-text {
+        gap: 20px;
+    }
+
+    &__item-text__title {
+        @extend %prompt-400;
+        color: $accent-700-color;
+    }
+
+    &__item-text__desc {
+        max-width: 380px;
+    }
+
+    &__item-num {
+        @extend %prompt-400;
+        line-height: 112px;
+        color: $accent-600-color;
+    }
+
+    &__line,
+    &__line--wide {
+        height: 2px;
+        background-color: $gray-300-color;
+    }
+
+    &__line--wide {
+        margin-left: auto;
     }
 }
