@@ -1,11 +1,7 @@
-const Member = ({ image, nameAndSurname, position, desc, timeline, memberClickHandler, memberCloseHandler }) => {
+const Member = ({ image, nameAndSurname, position, desc, memberClickHandler, memberCloseHandler }) => {
 
     const jsxElem = isOpen => (
-        <div 
-            className={`member ${isOpen ? 'member-open' : ''}`}
-            onMouseEnter={() => timeline?.pause()}
-            onMouseLeave={() => timeline?.resume()}
-        >
+        <div className={`member ${isOpen ? 'member-open' : ''}`}>
             <div className="member-top">
                 <div className="member__img" onClick={intermediateHandler}>
                     <img src={image} alt={nameAndSurname} />
