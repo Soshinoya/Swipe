@@ -382,3 +382,76 @@
         text-align: left;
     }
 }
+
+.features {
+    padding: 90px 100px;
+
+    .features-list {
+        background-color: rgba($white-color, 0.6);
+        border: 1px solid #fbfbff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px rgba($gray-color, 0.3);
+        padding: 45px;
+    }
+
+    .features-item {
+        &:not(:first-child) {
+            padding-left: 50px;
+            border-left: 2px solid $white-color;
+        }
+
+        &__title {
+            color: $accent-700-color;
+        }
+
+        &__text {
+            max-width: 320px;
+            margin: 25px 0 30px;
+        }
+
+        &__position {
+            max-width: 280px;
+            gap: 20px;
+        }
+
+        &__list {
+            gap: 15px;
+        }
+    }
+
+    &__bg {
+        z-index: -1;
+    }
+
+    &__bg-bluecube {
+        width: 235px;
+        height: 235px;
+        left: 10px;
+        bottom: 310px;
+        background-image: url(./../images/bg/cube-small-blue.png);
+    }
+
+    &__bg-purplering {
+        width: 320px;
+        height: 320px;
+        left: 510px;
+        bottom: 20px;
+        background-image: url(./../images/bg/ring-medium-purple.png);
+    }
+    
+    &__bg-yellowcylinder {
+        width: 420px;
+        height: 420px;
+        right: 35px;
+        bottom: 240px;
+        background-image: url(./../images/bg/cylinder-medium-yellow.png);
+    }
+}
+
+.features-top {
+    margin-bottom: 170px;
+
+    &__title {
+        max-width: 580px;
+    }
+}

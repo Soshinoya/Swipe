@@ -48,6 +48,7 @@ const Team = () => {
             tlSenior.to(marqueeSenior.current, {
                 scrollTrigger: {
                     trigger: marqueeSenior.current,
+                    start: 'top 110%',
                 },
                 ease: 'none',
                 duration: 8,
@@ -62,6 +63,7 @@ const Team = () => {
             tlMiddle.to(marqueeMiddle.current, {
                 scrollTrigger: {
                     trigger: marqueeMiddle.current,
+                    start: 'top 110%',
                 },
                 ease: 'none',
                 duration: 8,
