@@ -118,9 +118,36 @@ h6 {
     }
 }
 
-.section-top__line {
+.animation-link {
+    width: fit-content;
+    
+    p {
+        @extend %poppins-400;
+        color: $accent-700-color;
+        text-transform: uppercase;
+    }
+
+    &__box {
+        width: 15px;
+        height: 15px;
+        background-color: $carminу-pink-color;
+        z-index: -1;
+    }
+}
+
+.containerOf__line {
     height: 2px;
     background-color: $gray-300-color;
+
+    &--wide {
+        margin-left: auto;
+    }
+
+    &--absolute {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .video-button {

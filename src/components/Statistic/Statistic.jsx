@@ -17,7 +17,7 @@ const Statistic = () => {
         if (statisticParallaxBgPink !== null) shapesParallax(statisticParallaxBgPink.current, 1500)
         if (container === null) return
         setContainerRect(container.current.getBoundingClientRect())
-        window.onresize = () => setContainerRect(container.current.getBoundingClientRect())
+        window.addEventListener('resize', () => setContainerRect(container.current.getBoundingClientRect()))
     }, [])
 
     return (
@@ -36,7 +36,7 @@ const Statistic = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="statistic-numbers">
-                            <div className="statistic-numbers__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
+                            <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
                                     <h5 className="title statistic-numbers__item-text__title title">
@@ -48,7 +48,7 @@ const Statistic = () => {
                                 </div>
                                 <h1 className="statistic-numbers__item-num title">1000+</h1>
                             </div>
-                            <div className="statistic-numbers__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
+                            <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
                                     <h5 className="title statistic-numbers__item-text__title title">
@@ -60,7 +60,7 @@ const Statistic = () => {
                                 </div>
                                 <h1 className="statistic-numbers__item-num title">20+</h1>
                             </div>
-                            <div className="statistic-numbers__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
+                            <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
                                     <h5 className="title statistic-numbers__item-text__title title">
@@ -76,7 +76,7 @@ const Statistic = () => {
                     </div>
                 </div>
             </div>
-            <div className="statistic-numbers__line--wide" style={{ width: `calc(100% - ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
+            <div className="statistic-numbers__line--wide containerOf__line--wide" style={{ width: `calc(100% - ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
             <div ref={statisticParallaxBgGreen} className="parallax-bg statistic__bg statistic__bg--green d-none d-lg-block"></div>
             <div ref={statisticParallaxBgPink} className="parallax-bg statistic__bg statistic__bg--pink d-none d-lg-block"></div>
         </section>
