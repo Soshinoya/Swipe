@@ -1,3 +1,4 @@
+import AdvantagesVideo from "../components/AdvantagesVideo/AdvantagesVideo"
 import Companies from "../components/Companies/Companies"
 import Features from "../components/Features/Features"
 import Offer from "../components/Offer/Offer"
@@ -11,6 +12,7 @@ const Home = () => {
             <Companies />
             <Statistic />
             <Features />
+            <AdvantagesVideo />
 
             <Team />
         </>

@@ -455,3 +455,17 @@
         max-width: 580px;
     }
 }
+
+.advantages-video {
+    padding: 45px 0 200px;
+
+    &__top {
+        margin-bottom: 85px;
+        gap: 80px;
+    }
+
+    &__title {
+        max-width: 480px;
+        width: 100%;
+    }
+}
