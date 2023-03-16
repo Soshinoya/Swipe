@@ -2,7 +2,7 @@ import FeaturesItem from "../FeaturesItem/FeaturesItem"
 
 const FeaturesList = ({ features, featuresListClass }) => {
     return (
-        <div className={`features-list ${featuresListClass ? featuresListClass : ''}`}>
+        <div className={`glassmorphic-bg ${featuresListClass ? featuresListClass : ''}`}>
             {features.map((feature, i) => (
                 <FeaturesItem {...feature} key={i} />
             ))}

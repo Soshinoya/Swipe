@@ -360,16 +360,16 @@
     }
 }
 
+.glassmorphic-bg {
+    background-color: rgba($white-color, 0.6);
+    border: 1px solid #fbfbff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba($gray-color, 0.3);
+    padding: 45px;
+}
+
 .features {
     padding: 90px 100px;
-
-    .features-list {
-        background-color: rgba($white-color, 0.6);
-        border: 1px solid #fbfbff;
-        border-radius: 10px;
-        box-shadow: 0px 4px 20px rgba($gray-color, 0.3);
-        padding: 45px;
-    }
 
     .features-item {
         &:not(:first-child) {
@@ -480,6 +480,12 @@
         right: 100px;
         background-image: url(./../images/bg/triangle-small-green.png);
     }
+
+    &__content-item__bg--triangle-pink,
+    &__content-item__bg--triangle-green,
+    &__content-item__bg--balls {
+        z-index: -1;
+    }
 }
 
 .technologies-top {
@@ -488,4 +494,92 @@
 
 .technologies-item:not(:last-child) {
     margin-bottom: 50px;
+}
+
+.price {
+    padding: 90px 0 100px;
+
+    &__bg {
+        z-index: -1;
+    }
+
+    &__bg-yellowsegment {
+        width: 423px;
+        height: 423px;
+        top: 150px;
+        left: 0;
+        background-image: url('./../images/bg/segment-medium-yellow.png');
+    }
+
+    &__bg-purplering {
+        width: 236px;
+        height: 236px;
+        bottom: 200px;
+        right: 12px;
+        background-image: url('./../images/bg/ring-small-purple.png');
+    }
+}
+
+.price-top {
+    margin-bottom: 90px;
+
+    &__title {
+        max-width: 385px;
+        width: 100%;
+    }
+}
+
+.price-offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.price-item {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &--cool {
+        border: 2px solid $accent-500-color;
+    }
+
+    &__box {
+        right: 0;
+        top: 0;
+        background-color: $gray-300-color;
+        padding: 3px 25px 4px;
+        line-height: 22px;
+        @extend %poppins-400;
+        border-radius: 5px;
+    }
+
+    &__list {
+        margin: 45px 0 50px;
+        @extend %poppins-400;
+    }
+
+    &__list-item {
+        gap: 20px;
+        color: $accent-700-color;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__bottom-title {
+        font-size: 79px;
+        line-height: 88px;
+        position: relative;
+
+        &::after {
+            content: "/ month";
+            font-size: 18px;
+            line-height: 25px;
+            color: #abaabb;
+            position: absolute;
+            width: max-content;
+            bottom: 0;
+        }
+    }
 }
