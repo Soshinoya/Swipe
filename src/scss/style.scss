@@ -360,14 +360,6 @@
     }
 }
 
-.glassmorphic-bg {
-    background-color: rgba($white-color, 0.6);
-    border: 1px solid #fbfbff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba($gray-color, 0.3);
-    padding: 45px;
-}
-
 .features {
     padding: 90px 100px;
 
@@ -606,4 +598,113 @@
 
 .faq-items {
     gap: 33px;
+}
+
+.comments {
+    padding: 90px 0 100px;
+
+    &__bg-greentriangle {
+        width: 688px;
+        height: 688px;
+        left: -12.08%;
+        top: 200px;
+        z-index: -1;
+        background-image: url("./../images/bg/triangle-medium-green.png");
+    }
+
+    &__bg-pinktriangle {
+        width: 217px;
+        height: 217px;
+        right: 15.35%;
+        top: 800px;
+        z-index: -1;
+        background-image: url("./../images/bg/triangle-big-pink.png");
+    }
+}
+
+.comments-top {
+    margin-bottom: 70px;
+
+    &__title {
+        max-width: 386px;
+    }
+}
+
+.comments-slider {
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: fit-content;
+        width: fit-content;
+        top: unset;
+        bottom: 90px;
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .carousel-control-prev {
+        right: 195px;
+        left: unset;
+    }
+
+    .carousel-control-next {
+        right: 120px;
+    }
+
+    &__btn {
+        padding: 10px 15px 5px;
+
+        i {
+            font-size: 25px;
+            color: #807f89;
+        }
+    }
+}
+
+.comments-item {
+    padding: 50px 110px 160px;
+
+    &__img {
+        width: 200px;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        gap: 50px;
+        margin-bottom: 30px;
+    }
+
+    &__peoplename {
+        font-size: 39px;
+        line-height: 56px;
+        color: $accent-700-color;
+        @extend %prompt-400;
+    }
+
+    &__peopleposition {
+        color: #abaabb;
+    }
+
+    &__links {
+        gap: 25px;
+        margin-left: 50px;
+    }
+
+    &__link {
+        font-size: 25px;
+    }
+
+    &__comment {
+        max-width: 822px;
+        font-size: 30px;
+        line-height: 42px;
+    }
 }

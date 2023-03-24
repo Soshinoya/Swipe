@@ -158,6 +158,14 @@ h6 {
     gap: 15px;
 }
 
+.glassmorphic-bg {
+    background-color: rgba($white-color, 0.6);
+    border: 1px solid #fbfbff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba($gray-color, 0.3);
+    padding: 45px;
+}
+
 .accordion {
     padding-bottom: 50px;
 
