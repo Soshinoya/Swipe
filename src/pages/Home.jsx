@@ -1,5 +1,6 @@
 import AdvantagesVideo from "../components/AdvantagesVideo/AdvantagesVideo"
 import Companies from "../components/Companies/Companies"
+import Faq from "../components/Faq/Faq"
 import Features from "../components/Features/Features"
 import Offer from "../components/Offer/Offer"
 import Price from "../components/Price/Price"
@@ -17,8 +18,8 @@ const Home = () => {
             <AdvantagesVideo />
             <TechnologiesWrapper />
             <Price />
-
             <Team />
+            <Faq />
         </>
     )
 }

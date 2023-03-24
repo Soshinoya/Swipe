@@ -50,7 +50,7 @@ const TechnologiesWrapper = () => {
                                 {mainTitle}
                             </h3>
                             <div className="technologies__line containerOf__line containerOf__line--absolute" style={{
-                                [info?.isRight ? 'left' : 'right']: `-${Math.ceil(containerRect?.left + 12)}px`,
+                                [info?.isRight ? 'left' : 'right']: `-${Math.ceil(containerRect?.left + 11)}px`,
                                 width: `calc(100% + ${Math.ceil((containerRect?.left + 11) - (title.current && title.current.offsetWidth + 80))}px)`
                             }}></div>
                         </div>

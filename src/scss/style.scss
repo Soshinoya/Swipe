@@ -508,7 +508,7 @@
         height: 423px;
         top: 150px;
         left: 0;
-        background-image: url('./../images/bg/segment-medium-yellow.png');
+        background-image: url("./../images/bg/segment-medium-yellow.png");
     }
 
     &__bg-purplering {
@@ -516,7 +516,7 @@
         height: 236px;
         bottom: 200px;
         right: 12px;
-        background-image: url('./../images/bg/ring-small-purple.png');
+        background-image: url("./../images/bg/ring-small-purple.png");
     }
 }
 
@@ -582,4 +582,28 @@
             bottom: 0;
         }
     }
+}
+
+.faq {
+    padding-top: 90px;
+    overflow-x: clip;
+
+    &__bg--red {
+        width: 735px;
+        height: 735px;
+        top: -120px;
+        right: -180px;
+        z-index: -1;
+        background-image: url("./../images/bg/balls-big-red.png");
+    }
+
+    &__title {
+        max-width: 610px;
+        width: 100%;
+        margin-bottom: 130px;
+    }
+}
+
+.faq-items {
+    gap: 33px;
 }

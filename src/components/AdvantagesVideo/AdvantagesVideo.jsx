@@ -25,7 +25,7 @@ const AdvantagesVideo = () => {
                         Watch video to discover advantages
                     </h3>
                     <div className="advantages-video__line containerOf__line containerOf__line--absolute" style={{
-                        right: `-${Math.ceil(containerRect?.left + 12)}px`,
+                        right: `-${Math.ceil(containerRect?.left + 11)}px`,
                         width: `calc(100% + ${Math.ceil((containerRect?.left + 11) - (title.current && title.current.offsetWidth + 80))}px)`
                     }}>
                     </div>

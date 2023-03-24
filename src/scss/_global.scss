@@ -120,7 +120,7 @@ h6 {
 
 .animation-link {
     width: fit-content;
-    
+
     p {
         @extend %poppins-400;
         color: $accent-700-color;
@@ -156,4 +156,37 @@ h6 {
     transform: translate(-50%, -50%);
     padding: 18px 38px;
     gap: 15px;
+}
+
+.accordion {
+    padding-bottom: 50px;
+
+    &:not(:last-child) {
+        border-bottom: 2px solid $gray-300-color;
+    }
+}
+
+.accordion-top {
+    gap: 45px;
+    cursor: pointer;
+
+    &__title {
+        user-select: none;
+    }
+}
+
+.accordion-top__title,
+.accordion-body__text {
+    max-width: 715px;
+}
+
+.accordion-body {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+
+    &__text {
+        padding-top: 20px;
+    }
 }
