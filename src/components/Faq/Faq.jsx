@@ -1,8 +1,5 @@
-import { useEffect, useRef } from "react"
-
-import shapesParallax from "../../utils/shapesParallax"
-
 import AccordionItem from "../AccordionItem/AccordionItem"
+import Shape from "../Shape/Shape"
 
 const accordionData = [
     {
@@ -24,13 +21,6 @@ const accordionData = [
 ]
 
 const Faq = () => {
-
-    const faqParallaxBgRed = useRef(null)
-
-    useEffect(() => {
-        if (faqParallaxBgRed !== null) shapesParallax(faqParallaxBgRed.current, 200)
-    }, [])
-
     return (
         <section className="faq position-relative">
             <div className="container">
@@ -41,7 +31,7 @@ const Faq = () => {
                     </ul>
                 </div>
             </div>
-            <div ref={faqParallaxBgRed} className="parallax-bg faq__bg faq__bg--red d-none d-lg-block"></div>
+            <Shape offset={200} className="faq__bg faq__bg--red" />
         </section>
     )
 }

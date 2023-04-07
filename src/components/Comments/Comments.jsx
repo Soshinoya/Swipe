@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react'
 import { Carousel } from 'react-bootstrap'
 
-import shapesParallax from '../../utils/shapesParallax'
-
 import commentPeopleImg from './../../images/comments/1.png'
+
+import Shape from '../Shape/Shape'
 
 const commentsData = [
     {
@@ -55,14 +55,6 @@ const Comments = () => {
     useEffect(() => {
         setContainerRect(container.current.getBoundingClientRect())
         window.addEventListener('resize', () => setContainerRect(container.current.getBoundingClientRect()))
-    }, [])
-
-    const greenTriangle = useRef(null)
-    const pinkTriangle = useRef(null)
-
-    useEffect(() => {
-        if (greenTriangle !== null) shapesParallax(greenTriangle.current, 500)
-        if (pinkTriangle !== null) shapesParallax(pinkTriangle.current, 1000)
     }, [])
 
     return (
@@ -134,8 +126,8 @@ const Comments = () => {
                     </Carousel>
                 </div>
             </div>
-            <div ref={greenTriangle} className="parallax-bg comments__bg-greentriangle comments__bg d-none d-lg-block"></div>
-            <div ref={pinkTriangle} className="parallax-bg comments__bg-pinktriangle comments__bg d-none d-lg-block"></div>
+            <Shape offset={500} className="comments__bg-greentriangle comments__bg" />
+            <Shape offset={1000} className="comments__bg-pinktriangle comments__bg" />
         </section>
     )
 }

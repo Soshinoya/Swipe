@@ -1,20 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 
-import shapesParallax from './../../utils/shapesParallax'
+import Shape from '../Shape/Shape'
 
 const Statistic = () => {
-
-    const statisticParallaxBgGreen = useRef(null)
-
-    const statisticParallaxBgPink = useRef(null)
 
     const container = useRef(null)
 
     const [containerRect, setContainerRect] = useState()
 
     useEffect(() => {
-        if (statisticParallaxBgGreen !== null) shapesParallax(statisticParallaxBgGreen.current, 500)
-        if (statisticParallaxBgPink !== null) shapesParallax(statisticParallaxBgPink.current, 1500)
         if (container === null) return
         setContainerRect(container.current.getBoundingClientRect())
         window.addEventListener('resize', () => setContainerRect(container.current.getBoundingClientRect()))
@@ -77,8 +71,8 @@ const Statistic = () => {
                 </div>
             </div>
             <div className="statistic-numbers__line--wide containerOf__line--wide" style={{ width: `calc(100% - ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
-            <div ref={statisticParallaxBgGreen} className="parallax-bg statistic__bg statistic__bg--green d-none d-lg-block"></div>
-            <div ref={statisticParallaxBgPink} className="parallax-bg statistic__bg statistic__bg--pink d-none d-lg-block"></div>
+            <Shape offset={500} className="statistic__bg statistic__bg--green" />
+            <Shape offset={1500} className="statistic__bg statistic__bg--pink" />
         </section>
     )
 }

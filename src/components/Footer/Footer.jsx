@@ -1,17 +1,8 @@
-import { useEffect, useRef } from 'react';
-
-import shapesParallax from '../../utils/shapesParallax';
-
 import swipeWhiteLogo from './../../images/companies/swipe-white.png'
 
+import Shape from '../Shape/Shape'
+
 const Footer = () => {
-
-    const footerParallaxBg = useRef(null)
-
-    useEffect(() => {
-        if (footerParallaxBg !== null) shapesParallax(footerParallaxBg.current, 1500)
-    }, [])
-
     return (
         <footer className="footer position-relative">
             <div className="footer__inner position-relative">
@@ -91,7 +82,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-parallax">
-                <div ref={footerParallaxBg} className="parallax-bg footer__bg d-none d-lg-block"></div>
+                <Shape offset={1500} className="footer__bg" />
             </div>
         </footer>
     )

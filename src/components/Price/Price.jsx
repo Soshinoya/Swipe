@@ -1,8 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 
-import shapesParallax from './../../utils/shapesParallax'
-
 import PriceItem from '../PriceItem/PriceItem'
+import Shape from '../Shape/Shape'
 
 const priceOffers = [
     {
@@ -43,15 +42,6 @@ const Price = () => {
         window.addEventListener('resize', () => setContainerRect(container.current.getBoundingClientRect()))
     }, [])
 
-    const yellowSegment = useRef(null)
-
-    const purpleRing = useRef(null)
-
-    useEffect(() => {
-        if (yellowSegment !== null) shapesParallax(yellowSegment.current, 500, { start: 'top 75%' })
-        if (purpleRing !== null) shapesParallax(purpleRing.current, 500, { start: 'top 75%' })
-    }, [])
-
     return (
         <section className="price position-relative">
             <div ref={container} className="container">
@@ -68,8 +58,8 @@ const Price = () => {
                     {priceOffers.map((o, i) => <PriceItem {...o} key={i} />)}
                 </div>
             </div>
-            <div ref={yellowSegment} className="parallax-bg price__bg-yellowsegment price__bg d-none d-lg-block"></div>
-            <div ref={purpleRing} className="parallax-bg price__bg-purplering price__bg d-none d-lg-block"></div>
+            <Shape offset={500} customOptions={{ start: 'top 75%' }} className="price__bg-yellowsegment price__bg" />
+            <Shape offset={500} customOptions={{ start: 'top 75%' }} className="price__bg-purplering price__bg" />
         </section>
     )
 }

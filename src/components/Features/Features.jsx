@@ -1,7 +1,5 @@
-import { useEffect, useRef } from "react"
-
-import shapesParallax from './../../utils/shapesParallax'
 import FeaturesList from "../FeaturesList/FeaturesList"
+import Shape from "../Shape/Shape"
 
 const features = [
     {
@@ -75,19 +73,6 @@ const features = [
 ]
 
 const Features = () => {
-
-    const blueCube = useRef(null)
-
-    const purpleRing = useRef(null)
-
-    const yellowCylinder = useRef(null)
-
-    useEffect(() => {
-        if (blueCube !== null) shapesParallax(blueCube.current, 1000)
-        if (purpleRing !== null) shapesParallax(purpleRing.current, 1000)
-        if (yellowCylinder !== null) shapesParallax(yellowCylinder.current, 1000)
-    }, [])
-
     return (
         <section className="features position-relative">
             <div className="container">
@@ -101,9 +86,9 @@ const Features = () => {
                 </div>
                 <FeaturesList features={features} featuresListClass="row justify-content-between" />
             </div>
-            <div ref={blueCube} className="parallax-bg features__bg-bluecube features__bg d-none d-lg-block"></div>
-            <div ref={purpleRing} className="parallax-bg features__bg-purplering features__bg d-none d-lg-block"></div>
-            <div ref={yellowCylinder} className="parallax-bg features__bg-yellowcylinder features__bg d-none d-lg-block"></div>
+            <Shape offset={1000} className="features__bg-bluecube features__bg" />
+            <Shape offset={1000} className="features__bg-purplering features__bg" />
+            <Shape offset={1000} className="features__bg-yellowcylinder features__bg" />
         </section>
     )
 }

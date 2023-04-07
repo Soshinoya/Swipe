@@ -1,16 +1,7 @@
-import { useEffect, useRef } from 'react';
-
-import AnimationLink from '../AnimationLink/AnimationLink';
-
-import shapesParallax from '../../utils/shapesParallax'
+import AnimationLink from '../AnimationLink/AnimationLink'
+import Shape from '../Shape/Shape'
 
 const Offer = () => {
-    const offerParallaxBg = useRef(null)
-
-    useEffect(() => {
-        if (offerParallaxBg !== null) shapesParallax(offerParallaxBg.current, 500, { start: 'top 25%' })
-    }, [])
-
     return (
         <section className="offer">
             <div className="container">
@@ -38,7 +29,7 @@ const Offer = () => {
                     </div>
                 </div>
             </div>
-            <div ref={offerParallaxBg} className="parallax-bg offer__bg d-none d-lg-block"></div>
+            <Shape offset={500} customOptions={{ start: 'top 25%' }} className="offer__bg" />
         </section>
     )
 }

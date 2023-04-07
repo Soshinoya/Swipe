@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+
 import Technologies from '../Technologies/Technologies'
 
 const TechnologiesWrapper = () => {
