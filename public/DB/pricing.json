@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Basic",
+        "isCool": false,
+        "arrOfStr": [
+            {
+                "text": "Free 30-days trial period",
+                "isIncluded": true
+            },
+            {
+                "text": "Professional design and guidelines for customization",
+                "isIncluded": true
+            },
+            {
+                "text": "Unlimited amount of pages to change",
+                "isIncluded": true
+            },
+            {
+                "text": "24/7 technical support",
+                "isIncluded": false
+            },
+            {
+                "text": "Advenced security components",
+                "isIncluded": false
+            }
+        ],
+        "price": 29
+    },
+    {
+        "title": "Pro",
+        "isCool": true,
+        "arrOfStr": [
+            {
+                "text": "Free 30-days trial period",
+                "isIncluded": true
+            },
+            {
+                "text": "Professional design and guidelines for customization",
+                "isIncluded": true
+            },
+            {
+                "text": "Unlimited amount of pages to change",
+                "isIncluded": true
+            },
+            {
+                "text": "24/7 technical support",
+                "isIncluded": true
+            },
+            {
+                "text": "Advenced security components",
+                "isIncluded": true
+            }
+        ],
+        "price": 39
+    }
+]

@@ -1,34 +1,8 @@
-import { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import PriceItem from '../PriceItem/PriceItem'
 import Shape from '../Shape/Shape'
-
-const priceOffers = [
-    {
-        title: 'Basic',
-        isCool: false,
-        arrOfStr: [
-            { text: 'Free 30-days trial period', isIncluded: true },
-            { text: 'Professional design and guidelines for customization', isIncluded: true },
-            { text: 'Unlimited amount of pages to change', isIncluded: true },
-            { text: '24/7 technical support', isIncluded: false },
-            { text: 'Advenced security components', isIncluded: false }
-        ],
-        price: 29
-    },
-    {
-        title: 'Pro',
-        isCool: true,
-        arrOfStr: [
-            { text: 'Free 30-days trial period', isIncluded: true },
-            { text: 'Professional design and guidelines for customization', isIncluded: true },
-            { text: 'Unlimited amount of pages to change', isIncluded: true },
-            { text: '24/7 technical support', isIncluded: true },
-            { text: 'Advenced security components', isIncluded: true }
-        ],
-        price: 39
-    }
-]
+import DataProvider from '../DataProvider/DataProvider'
 
 const Price = () => {
     const title = useRef(null)
@@ -55,7 +29,9 @@ const Price = () => {
                     }}></div>
                 </div>
                 <div className="price-offers">
-                    {priceOffers.map((o, i) => <PriceItem {...o} key={i} />)}
+                    <DataProvider url="./DB/pricing.json" render={data => {
+                        return data.map((o, i) => <PriceItem {...o} key={i} />)
+                    }} />
                 </div>
             </div>
             <Shape offset={500} customOptions={{ start: 'top 75%' }} className="price__bg-yellowsegment price__bg" />

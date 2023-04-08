@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Joe Smith",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet. Nulla viverra quam sit amet lacus accumsan, ac interdum nibh eleifend.",
+        "photo": "./DB/images/comments/1.png",
+        "position": "CEO at Flatty",
+        "rate": 4,
+        "social": [
+            "comments-item__link fab fa-linkedin-in",
+            "comments-item__link fab fa-facebook-f",
+            "comments-item__link fab fa-twitter"
+        ]
+    },
+    {
+        "name": "Joe",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet. Nulla viverra quam sit amet lacus accumsan, ac interdum nibh eleifend.",
+        "photo": "./DB/images/comments/1.png",
+        "position": "CEO",
+        "rate": 3,
+        "social": [
+            "comments-item__link fab fa-linkedin-in",
+            "comments-item__link fab fa-facebook-f",
+            "comments-item__link fab fa-twitter"
+        ]
+    },
+    {
+        "name": "Alex Smith",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet. Nulla viverra quam sit amet lacus accumsan, ac interdum nibh eleifend.",
+        "photo": "./DB/images/comments/1.png",
+        "position": "Flatty",
+        "rate": 5,
+        "social": [
+            "comments-item__link fab fa-linkedin-in",
+            "comments-item__link fab fa-facebook-f",
+            "comments-item__link fab fa-twitter"
+        ]
+    }
+]
