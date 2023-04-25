@@ -1,0 +1,22 @@
+[
+    {
+        "imgPath": "./DB/images/press/newsletter.jpg",
+        "title": "Newsletters template: blog posts, articles, features, sales",
+        "tags": ["Must to read"]
+    },
+    {
+        "imgPath": "./DB/images/press/nextgen.jpg",
+        "title": "Nextgen - new temlate about games and industry",
+        "tags": ["New"]
+    },
+    {
+        "imgPath": "./DB/images/press/enigma.jpg",
+        "title": "Enigma Software for startups is the best choice",
+        "tags": ["Must to read"]
+    },
+    {
+        "imgPath": "./DB/images/press/artboard.jpg",
+        "title": "Artboard - classic Admin/Dashboard template and UI kit",
+        "tags": ["Most popular"]
+    }
+]
