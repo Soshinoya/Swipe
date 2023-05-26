@@ -1,0 +1,8 @@
+@use '../../base/variables';
+
+.button--submit {
+    width: 100%;
+    padding: 17px;
+    background-color: variables.$accent-500-color;
+    color: variables.$white-color;
+}

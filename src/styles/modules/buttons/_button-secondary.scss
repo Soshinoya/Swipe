@@ -1,0 +1,18 @@
+@use '../../base/variables';
+@use '../../utils/mixins';
+
+.button--secondary {
+    color: variables.$accent-700-color;
+    background-color: rgba(variables.$white-color, 0.4);
+    border: 2px solid rgba(variables.$white-color, 0.4);
+    box-shadow: 0px 4px 20px rgba(variables.$gray-color, 0.3);
+
+    @include mixins.hover using ($type) {
+        @if ($type == 'not-disabled') {
+            color: variables.$white-color;
+            background-color: variables.$accent-500-color;
+            border: 2px solid rgba(variables.$accent-500-color, 0.4);
+            box-shadow: 0px 4px 20px rgba(variables.$accent-500-color, 0.3);
+        }
+    }
+}

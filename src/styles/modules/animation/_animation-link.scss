@@ -1,0 +1,18 @@
+@import '../../base/variables';
+
+.animation-link {
+    width: fit-content;
+
+    p {
+        @extend %poppins-400;
+        color: $accent-700-color;
+        text-transform: uppercase;
+    }
+
+    &__box {
+        width: 15px;
+        height: 15px;
+        background-color: $carminу-pink-color;
+        z-index: -1;
+    }
+}

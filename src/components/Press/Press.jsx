@@ -3,56 +3,47 @@ import React, { useEffect, useRef, useState } from "react"
 import DataProvider from './../DataProvider/DataProvider'
 import PressSingle from "../PressSingle/PressSingle"
 
+import SwiperSlider from '../SwiperSlider/SwiperSlider'
+
 const Press = () => {
 
-    const pressArticles = useRef(null)
+    const title = useRef(null)
 
-    const [pressArticlesLeftPos, setPressArticlesLeftPos] = useState('0px')
+    const container = useRef(null)
 
-    const [isMouseDown, setIsMouseDown] = useState(false)
-
-    const [mouseStartPos, setMouseStartPos] = useState(0)
-    const [mouseMovePos, setMouseMovePos] = useState(0)
+    const [containerRect, setContainerRect] = useState(null)
 
     useEffect(() => {
-        if (!pressArticles.current) {
-            return
-        }
-        if (isMouseDown) {
-            pressArticles.current.style.left = (pressArticlesLeftPos.match(/[-+]?\d+(\.\d+)?/g) - (mouseStartPos - mouseMovePos)) + 'px'
-        } else {
-            setPressArticlesLeftPos(pressArticles.current.style.left)
-        }
-    }, [mouseStartPos, mouseMovePos, isMouseDown])
+        setContainerRect(container.current.getBoundingClientRect())
+        window.addEventListener('resize', () => setContainerRect(container.current.getBoundingClientRect()))
+    }, [])
 
-    document.onmouseleave = () => setIsMouseDown(false)
+    const sliderConfig = {
+        slidesPerView: 'auto',
+        spaceBetween: 120
+    }
 
     return (
         <section className="press">
-            <div className="container">
+            <div ref={container} className="container">
                 <div className="press-top d-flex align-items-baseline justify-content-between">
-                    <h2 className="title press-top__title">
+                    <h2 ref={title} className="title press-top__title">
                         In the press
                     </h2>
                     <button className="button button--accent press-top__button">
                         View more
                     </button>
                 </div>
-                <ul ref={pressArticles} className="press-articles"
-                    onMouseMove={({ clientX }) => setMouseMovePos(clientX)}
-                    onMouseUp={() => setIsMouseDown(false)}
-                    onMouseDown={({ clientX }) => {
-                        setMouseStartPos(clientX)
-                        setIsMouseDown(true)
-                    }}
-                >
-                    <DataProvider url="./DB/press.json" render={data => data.length > 0 && data.map((articleIntro, i, a) => (
-                        <>
-                            <PressSingle {...articleIntro} />
-                            {a[i + 1] && <div className="press-articles--separator"></div>}
-                        </>
-                    ))} />
-                </ul>
+            </div>
+            <div className="press-articles__wrapper position-relative" style={{
+                left: `${containerRect?.left}px`,
+                width: `calc(100% - ${containerRect?.left * 2}px)`
+                }}>
+                <DataProvider url="./DB/press.json" render={data => (
+                    <SwiperSlider config={sliderConfig} data={data} className="press-articles">
+                        <PressSingle />
+                    </SwiperSlider>
+                )} />
             </div>
         </section>
     )

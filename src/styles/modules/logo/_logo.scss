@@ -1,0 +1,10 @@
+@use '../../utils/mixins';
+
+.logo {
+    display: inline-block;
+    height: 50px;
+
+    img {
+        @include mixins.image-default()
+    }
+}

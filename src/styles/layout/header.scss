@@ -1,0 +1,41 @@
+@use '../utils/mixins';
+
+.header {
+    padding: 35px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        backdrop-filter: blur(10px);
+    }
+}
+
+.header-nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__item-link {
+        transition: color 0.3s ease;
+
+        @include mixins.font($color: $accent-700-color);
+
+        &:hover {
+            color: $carminу-pink-color;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@use '../../base/variables';
+@use '../../utils/mixins';
+
+.textarea {
+    @extend %text-input;
+
+    resize: none;
+    padding: 20px 32px;
+    @include mixins.outline-on-focus(variables.$accent-500-color);
+}

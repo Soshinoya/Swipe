@@ -98,8 +98,8 @@ const Comments = () => {
                     </Carousel>
                 </div>
             </div>
-            <Shape offset={500} className="comments__bg-greentriangle comments__bg" />
-            <Shape offset={1000} className="comments__bg-pinktriangle comments__bg" />
+            <Shape offset={500} className="comments__bg-greentriangle" />
+            <Shape offset={1000} className="comments__bg-pinktriangle" />
         </section>
     )
 }

@@ -6,7 +6,7 @@ const Shape = ({ offset = 0, customOptions = {}, className = '' }) => {
 
     const shapesParallaxRef = useRef(null)
 
-        useEffect(() => shapesParallax(shapesParallaxRef.current, +offset, customOptions))
+    useEffect(() => shapesParallax(shapesParallaxRef.current, +offset, customOptions))
 
     return (
         <div

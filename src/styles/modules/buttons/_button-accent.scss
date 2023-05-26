@@ -1,0 +1,15 @@
+@use '../../base/variables';
+@use '../../utils/mixins';
+
+.button--accent {    
+    color: variables.$white-color;
+    background-color: variables.$accent-500-color;
+    border: 1px solid variables.$accent-500-color;
+
+    @include mixins.hover using ($type) {
+        @if $type =='not-disabled' {
+            color: variables.$accent-500-color;
+            background-color: variables.$white-color;
+        }
+    }
+}

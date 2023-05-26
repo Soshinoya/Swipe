@@ -1,0 +1,82 @@
+@use '../utils/mixins';
+
+.footer {
+    padding: 85px 0 65px;
+    background-color: $accent-700-color;
+    z-index: 0;
+
+    a:hover {
+        color: $white-color;
+    }
+
+    &__inner {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 50%;
+            right: 0;
+            background-color: #e7e5ff;
+            top: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 50%;
+            right: 0;
+            background-color: #e7e5ff;
+            bottom: 0;
+        }
+    }
+
+    &__bg {
+        @include mixins.shape-customize(370px, 465px, $bottom: 0, $right: 0, $bg: url('../../images/bg/orange-spiral--small.png'));
+    }
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    height: 100%;
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-bottom: 5px;
+        @include mixins.font($color: $white-color)
+    }
+
+    &__email {
+        margin-bottom: auto;
+        @include mixins.font(20px, 22px, $white-color)
+    }
+
+    &__copyright {
+        @include mixins.font(14px, 20px, $white-color) {
+            span {
+                color: $accent-500-color;
+            }
+        }
+    }
+}
+
+.footer-links {
+    padding: 60px 110px 60px 0;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__link {
+        color: $white-color;
+
+        @include mixins.font($color: $white-color);
+    }
+}

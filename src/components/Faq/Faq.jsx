@@ -31,7 +31,7 @@ const Faq = () => {
                     </ul>
                 </div>
             </div>
-            <Shape offset={200} className="faq__bg faq__bg--red" />
+            <Shape offset={200} className="faq__bg--red" />
         </section>
     )
 }

@@ -1,0 +1,22 @@
+@use '../../base/variables';
+@use '../../utils/mixins';
+
+.button {
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 35px;
+
+    font-size: 16px;
+    line-height: 22px;
+    @extend %poppins-400;
+
+    transition: all 0.3s ease;
+
+    &:disabled {
+        background-color: #ccc;
+        border: #ccc;
+    }
+
+    @include mixins.outline-on-focus(variables.$accent-500-color);
+}

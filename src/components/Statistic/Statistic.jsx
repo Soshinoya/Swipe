@@ -33,7 +33,7 @@ const Statistic = () => {
                             <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
-                                    <h5 className="title statistic-numbers__item-text__title title">
+                                    <h5 className="statistic-numbers__item-text__title">
                                         Happy clients
                                     </h5>
                                     <p className="statistic-numbers__item-text__desc">
@@ -45,7 +45,7 @@ const Statistic = () => {
                             <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
-                                    <h5 className="title statistic-numbers__item-text__title title">
+                                    <h5 className="statistic-numbers__item-text__title">
                                         Products created
                                     </h5>
                                     <p className="statistic-numbers__item-text__desc">
@@ -57,7 +57,7 @@ const Statistic = () => {
                             <div className="statistic-numbers__line containerOf__line" style={{ width: `calc(100% + ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
                             <div className="statistic-numbers__item d-flex align-items-center justify-content-between">
                                 <div className="statistic-numbers__item-text d-flex flex-column">
-                                    <h5 className="title statistic-numbers__item-text__title title">
+                                    <h5 className="statistic-numbers__item-text__title">
                                         Investments received
                                     </h5>
                                     <p className="statistic-numbers__item-text__desc">
@@ -71,8 +71,8 @@ const Statistic = () => {
                 </div>
             </div>
             <div className="statistic-numbers__line--wide containerOf__line--wide" style={{ width: `calc(100% - ${Math.ceil(containerRect?.left + 11)}px)` }}></div>
-            <Shape offset={500} className="statistic__bg statistic__bg--green" />
-            <Shape offset={1500} className="statistic__bg statistic__bg--pink" />
+            <Shape offset={500} className="statistic__bg--green" />
+            <Shape offset={1500} className="statistic__bg--pink" />
         </section>
     )
 }

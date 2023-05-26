@@ -1,0 +1,41 @@
+body {
+    font-size: 18px;
+    line-height: 25px;
+    color: $accent-600-color;
+    @extend %prompt-400;
+}
+
+.title {
+    @extend %poppins-400;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 88px;
+    color: $accent-700-color;
+}
+
+h2 {
+    font-size: 70px;
+    line-height: 77px;
+}
+
+h3 {
+    font-size: 45px;
+    line-height: 50px;
+}
+
+h4 {
+    font-size: 35px;
+    line-height: 38px;
+}
+
+h5 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+h6 {
+    font-size: 20px;
+    line-height: 22px;
+}
